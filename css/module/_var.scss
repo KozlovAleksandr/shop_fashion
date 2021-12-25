@@ -1,0 +1,21 @@
+$decorColor: #F16D7F;
+$darkColor: #222222;
+$lightColor: #FBFBFB;
+$lightGrey: #B1B1B1;
+
+@mixin text13 {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@mixin smallText {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin middleText {
+  font-size: 16px;
+  line-height: 19px;
+}

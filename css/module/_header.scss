@@ -1,0 +1,106 @@
+.header {
+  background: $darkColor;
+  position: relative;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 78px;
+    right: -29px;
+    z-index: 2;
+  }
+
+  &__burger {
+    cursor: pointer;
+  }
+}
+
+.menu {
+  &__search {
+    display: flex;
+    align-items: flex-end;
+
+    & li {
+      margin-right: 41px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    & *:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+}
+
+#burger {
+  display: none;
+}
+
+#burger:checked ~ .header__nav {
+  display: block;
+}
+
+#burger:not(:checked) ~ .header__nav {
+  display: none;
+}
+
+.nav {
+  width: 232px;
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+  padding-left: 41px;
+  background: #FFFFFF;
+
+  &__container {
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    right: 5px;
+    top: -32px;
+    cursor: pointer;
+  }
+
+  &__title {
+    @include smallText;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 37px 0 24px;
+  }
+
+  &__heading {
+    @include smallText;
+    text-transform: uppercase;
+    color: $decorColor;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    margin-bottom: 11px;
+    @include smallText;
+    margin-left: 21px;
+    cursor: pointer;
+
+    & :not(:last-child) {
+      margin-bottom: 11px;
+    }
+
+    & :last-child {
+      margin-bottom: 20px;
+    }
+
+    & *:hover {
+      font-size: 15px;
+      transition: 0.3s;
+    }
+  }
+}

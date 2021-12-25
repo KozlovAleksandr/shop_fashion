@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+ul li {
+  list-style-type: none;
+}
+
+body, html {
+  font-family: Lato;
+  overflow-x: hidden;
+}
+
+._container {
+  max-width: 1160px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+}

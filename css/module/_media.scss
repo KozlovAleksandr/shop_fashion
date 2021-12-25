@@ -1,0 +1,454 @@
+// HEADER ---------------------
+
+@media (max-width: 682px) {
+  .menu {
+    &__nav {
+      & a:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}
+
+// BANNER ---------------------
+
+@media (max-width: 1025px) {
+  .banner-block {
+    &__body {
+      max-height: 50vh;
+      background-position: 10%;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  .title__decor-top {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 682px) {
+  .banner-block {
+    &__body {
+      max-height: 33vh;
+      background-image: none;
+      justify-content: center;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .title__decor-top {
+    font-size: 38px;
+  }
+}
+
+// CATEGORY ---------------------
+
+@media (max-width: 1155px) {
+  .category__body {
+    flex-wrap: none;
+  }
+}
+
+@media (max-width: 682px) {
+  .category {
+
+    &__body {
+      margin-top: 19px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &>:not(last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__item {
+
+      &:not(:last-child) {
+        height: 247px;
+        width: 343px;
+      }
+
+      &:last-child {
+        margin: 0;
+        width: 343px;
+        height: 116px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .category {
+    &__item {
+
+      &:not(:last-child) {
+        width: 95%;
+      }
+
+      &:last-child {
+        width: 95%;
+      }
+    }
+  }
+}
+
+// PRODUCTS ---------------------
+
+
+@media (max-width: 1155px) {
+  .products {
+
+    &__header h2 {
+      margin-top: 64px;
+    }
+
+    &__body {
+      margin-top: 48px;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__button {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+@media (max-width: 1132px) {
+  .products {
+    &__column+.last {
+      display: none;
+    }
+
+    &__filter {
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 24px;
+
+      &_search {
+        display: flex;
+        margin: 0;
+      }
+
+      &_category {
+        margin: 0;
+      }
+    }
+  }
+
+  .paginator {
+    margin: 40px 0 64px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .products {
+    &__filter {
+      justify-content: space-around;
+
+      & #details__title {
+        display: none;
+      }
+
+      & img {
+        height: 25px;
+      }
+
+      &_category {
+        font-size: 12px;
+        line-height: 14px;
+
+        & li {
+
+          & .item {
+            margin-right: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 755px) {
+  .products {
+    &__button {
+      margin-top: 40px;
+    }
+
+    &__column+.last {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 755px) {
+  .products {
+
+    &__nav-block {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__body {
+      &_product {
+        padding-bottom: 64px; // отступ для блока products на странице product
+      }
+    }
+  }
+}
+
+
+// FOOTER ---------------------
+
+@media (max-width: 860px) {
+  .convenience {
+
+    &__body {
+      height: 100%;
+      flex-direction: column;
+      gap: none;
+      padding: 48px 0 64px;
+    }
+
+    &__column {
+      width: 360px;
+    }
+  }
+
+  .footer__promotion {
+    background-position: 20% bottom;
+  }
+
+  .promotion {
+
+    &__body {
+      flex-direction: column;
+      height: 100%;
+      padding: 64px 0 140px;
+
+      &> :not(:last-child) {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  .footer-bottom__container {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 530px) {
+  .footer-bottom__container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 43px 0 9px;
+  }
+
+  .bottom__social {
+    margin: 0 0 40px;
+  }
+}
+
+// REGISTRATION ---------------------
+
+@media (max-width: 968px) {
+  .registration {
+
+    &__block {
+
+      &_loyalty {
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 22px;
+
+        & :first-child {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .registration {
+
+    &__block {
+      flex-direction: column;
+      align-items: center;
+
+      &_form {
+        margin: 40px 0 0 0;
+      }
+
+      &_loyalty {
+        margin: 40px 0 96px 0;
+      }
+    }
+  }
+}
+
+// CART ---------------------
+
+@media (max-width: 1068px) {
+
+  .cart-block {
+    flex-direction: column;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__buttons {
+      margin: 19px 0 62px;
+      gap: 38px;
+    }
+
+    &__form {
+      & h4 {
+        margin-top: 0;
+      }
+    }
+
+    &__adress {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__count {
+      height: 214px;
+      margin: 39px 0 0 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-block {
+
+    &__adress {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__count {
+      height: 214px;
+      margin: 0;
+      margin-bottom: 96px;
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .cart-block {
+    &__goods {
+      width: 100%;
+
+      & img:first-child {
+        width: 40%;
+      }
+
+      &_info {
+        & h2 {
+          @include middleText;
+          width: 180px;
+        }
+
+        & p {
+          @include smallText;
+        }
+
+        & input {
+          margin-left: 14px;
+          width: 30px;
+          height: 17px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 545px) {
+  .cart-block {
+
+    &__goods {
+
+      &_info {
+        & h2 {
+          margin: 13px 0 25px;
+        }
+      }
+    }
+
+    &__buttons {
+      gap: 9px;
+
+      & a {
+        font-size: 12px;
+        padding: 9px 17px;
+      }
+    }
+  }
+}
+
+// PRODUCT CART ---------------------
+
+@media (max-width: 1024px) {
+  .presentation {
+    height: 624px;
+
+    &__container {
+      background-size: contain;
+      padding: 30px;
+    }
+  }
+
+  .productCard {
+    &__column {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 755px) {
+  .productCard {
+    &__column {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .presentation {
+    height: 500px;
+  }
+
+  .productCard {
+    &__specification {
+      padding-bottom: 32px;
+
+      & p {
+        margin-top: 32px;
+      }
+    }
+
+    &__ordering {
+      & ul {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.products {
+
+  &__nav {
+    background: #F8F3F4;
+  }
+
+  &__nav-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 148px;
+
+    & a {
+      font-size: 24px;
+      line-height: 29px;
+      color: $decorColor;
+      text-transform: uppercase;
+    }
+
+    & nav {
+      @include smallText;
+      text-transform: uppercase;
+      color: #636363;
+      font-size: 14px;
+
+      & span {
+
+        &:not(:last-child) {
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+}

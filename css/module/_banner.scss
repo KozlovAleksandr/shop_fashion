@@ -1,0 +1,45 @@
+.banner-block {
+  background: #F1E4E6;
+
+
+  &__container {
+
+  }
+
+  &__body {
+    display: flex;
+    height: calc(100vh - 78px);
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../img/banner/banner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    margin-right: 60px;
+  }
+
+  &__title {
+    max-width: 406px;
+    border-left: 12px solid $decorColor;
+    padding-left: 17px;
+    font-size: 31px;
+  }
+}
+
+.title {
+  &__decor-top {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 900;
+  }
+
+  &__decor-bottom {
+    display: block;
+  }
+
+  &__decor {
+    color: $decorColor;
+  }
+}
+
+

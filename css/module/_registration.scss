@@ -1,0 +1,124 @@
+@keyframes come {
+  from {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right 200px;
+  }
+
+  to {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right 29px;
+  }
+
+  70% {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right 20px;
+  }
+}
+
+@keyframes away {
+  from {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right 29px;
+  }
+
+  to {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right -50px;
+  }
+
+  30% {
+    background: $decorColor url("../img/registration/02.svg") no-repeat center right 35px;
+  }
+}
+
+.registration {
+  &__block {
+    display: flex;
+
+    &_form {
+      flex: 1 1 43%;
+      margin: 62px 0 96px 0;
+
+      &-box {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      & h3 {
+        @include middleText;
+        font-weight: 300;
+        color: $darkColor;
+      }
+
+      & input {
+        @include text13;
+        color: $lightGrey;
+        padding: 13px 0 16px 17px;
+        margin-top: 20px;
+        border: 1px solid #A4A4A4;
+      }
+
+      p {
+        color: $lightGrey;
+        @include text13;
+        margin: 15px 0 39px;
+      }
+
+      &_radio {
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #000000;
+        margin: 32px 0;
+
+        & label {
+          margin-left: 10px;
+          margin-right: 20px;
+        }
+
+        & #sex {
+          transform: scale(1.5);
+          cursor: pointer;
+        }
+      }
+
+      & #button {
+        @include smallText;
+        text-transform: uppercase;
+        color: $lightColor;
+        background: $decorColor url("../img/registration/02.svg") no-repeat center right 29px;
+        padding: 17px 0 17px 29px;
+        width: 167px;
+        cursor: pointer;
+        text-align: start;
+        border: none;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+        animation-name: come;
+        
+
+        &:hover {
+          animation-name: away;
+        }
+      }
+    }
+
+    &_loyalty {
+      flex: 1 1 57%;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+      margin: 64px 0 277px 0;
+
+      & *:not(:last-child) {
+        margin-bottom: 22px;
+      }
+
+      & ul li {
+        list-style-image: url("../img/registration/01.svg");
+        list-style-position: inside;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
