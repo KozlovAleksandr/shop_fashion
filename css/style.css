@@ -72,10 +72,54 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .menu__nav *:not(:last-child) {
   margin-right: 33px;
+}
+
+.menu__nav .item__amount {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background-color: #F16D7F;
+  color: #FBFBFB;
+  font-size: 12px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.menu__nav .cart_subtotal {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  text-align: left;
+  border-radius: 5px;
+  background: #eae4ea;
+  width: 430px;
+  z-index: 3;
+  display: none;
+}
+
+.menu__nav .cart_subtotal th {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.menu__nav .cart_subtotal td {
+  font-size: 12px;
+  padding: 10px;
 }
 
 #burger {
@@ -91,8 +135,10 @@ body, html {
 }
 
 .nav {
+  position: absolute;
+  top: 59px;
   width: 232px;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 77px);
   overflow-y: scroll;
   padding-left: 41px;
   background: #FFFFFF;
