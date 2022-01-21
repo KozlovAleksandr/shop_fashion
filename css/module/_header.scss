@@ -33,9 +33,49 @@
   &__nav {
     display: flex;
     align-items: center;
+    position: relative;
 
     & *:not(:last-child) {
       margin-right: 33px;
+    }
+
+    & .item__amount {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      height: 23px;
+      width: 23px;
+      border-radius: 50%;
+      background-color: $decorColor;
+      color: $lightColor;
+      font-size: 12px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    & .cart_subtotal {
+      position: absolute;
+      top: 25px;
+      right: 45px;
+      text-align: left;
+      border-radius: 5px;
+      background: #eae4ea;
+      width: 430px;
+      z-index: 3;
+      display: none;
+
+      & th {
+        font-size: 14px;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+      }
+
+      & td {
+        font-size: 12px;
+        padding: 10px;
+      }
     }
   }
 }
@@ -44,17 +84,21 @@
   display: none;
 }
 
-#burger:checked ~ .header__nav {
+#burger:checked~.header__nav {
   display: block;
 }
 
-#burger:not(:checked) ~ .header__nav {
+#burger:not(:checked)~.header__nav {
   display: none;
 }
 
+// ---------- ВЫПАДАЮЩЕЕ МЕНЮ ----------
+
 .nav {
+  position: absolute;
+  top: 59px;
   width: 232px;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 77px);
   overflow-y: scroll;
   padding-left: 41px;
   background: #FFFFFF;
